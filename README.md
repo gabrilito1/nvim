@@ -22,6 +22,6 @@
      ```bash
      sudo apt install ripgrep fd-find
      ```
-   - **Compilador C++** (Bind == `<F5>`):  
+   - **C++ Compilator** (Bind == `<F5>`):  
      ```bash
      sudo apt install g++
