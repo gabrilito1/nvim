@@ -34,6 +34,10 @@ vim.api.nvim_set_keymap('n', '<C-n>', ':NERDTreeToggle<CR>', { noremap = true, s
 -- Atalho para buscar arquivos com Telescope
 vim.api.nvim_set_keymap('n', '<C-f>', ':Telescope find_files<CR>', { noremap = true, silent = true })
 
+-- Mapeamento para copiar o conteúdo do arquivo para o clipboard no Linux
+vim.api.nvim_set_keymap('n', '<C-c>', ':w !xclip -selection clipboard<CR>', { noremap = true, silent = true })
+
+
 
 
 
@@ -44,7 +48,8 @@ require'nvim-treesitter.configs'.setup {
 }
 
 -- Atalho para compilar no terminal
-vim.api.nvim_set_keymap('n', '<F5>', ':!g++ % -o %:r && ./%:r<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<F5>', ':term g++ % -o %:r && ./%:r<CR>', { noremap = true, silent = true })
+
 
 
 
